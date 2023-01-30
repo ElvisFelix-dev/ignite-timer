@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 
 import { NewCycleForm } from './components/NewCycleForm'
 import { Countdown } from './components/Countdown'
-import { CycleContext } from '../../context/CycleContext'
+import { CyclesContext } from '../../context/CyclesContext'
 
 import {
   HomeContainer,
@@ -27,7 +27,7 @@ type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
 
 export function Home() {
   const { activeCycle, createNewCycle, interruptCurrentCycle } =
-    useContext(CycleContext)
+    useContext(CyclesContext)
 
   const newCycleForm = useForm<NewCycleFormData>({
     resolver: zodResolver(newCycleFormValidationSchema),

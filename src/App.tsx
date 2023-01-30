@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { defaultTheme } from './styles/themes/deafult'
 import { GlobalStyle } from './styles/global'
 import { Router } from './Router'
-import { CyclesContextProvider } from './context/CycleContext'
+import { CyclesContextProvider } from './context/CyclesContext'
 
 export function App() {
   return (
