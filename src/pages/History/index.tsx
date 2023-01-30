@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
+import { Helmet } from 'react-helmet'
 
 import { HistoryContainer, HistoryList, Status } from './styles'
 import { CycleContext } from '../../context/CycleContext'
@@ -10,6 +11,11 @@ export function History() {
 
   return (
     <HistoryContainer>
+      <Helmet>
+        <title>Ignite Timer | Historico</title>
+        <meta name="Timer para lidar melhor com seu tempo" content="Pomodoro" />
+      </Helmet>
+
       <h1>Meu histórico</h1>
 
       <HistoryList>

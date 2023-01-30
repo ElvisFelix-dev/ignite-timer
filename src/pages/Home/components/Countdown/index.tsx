@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { differenceInSeconds } from 'date-fns'
+import { Helmet } from 'react-helmet'
 
 import { CountdownContainer, Separator } from './styles'
 import { CycleContext } from '../../../../context/CycleContext'
@@ -62,6 +63,12 @@ export function Countdown() {
 
   return (
     <CountdownContainer>
+      <Helmet>
+        <title>
+          Ignite Timer | {minutes}:{seconds}
+        </title>
+        <meta name="Timer para lidar melhor com seu tempo" content="Pomodoro" />
+      </Helmet>
       <span>{minutes[0]}</span>
       <span>{minutes[1]}</span>
       <Separator>:</Separator>

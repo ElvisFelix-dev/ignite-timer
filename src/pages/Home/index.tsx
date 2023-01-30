@@ -2,6 +2,7 @@ import { HandPalm, Play } from 'phosphor-react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
+import { Helmet } from 'react-helmet'
 
 import { NewCycleForm } from './components/NewCycleForm'
 import { Countdown } from './components/Countdown'
@@ -49,6 +50,11 @@ export function Home() {
 
   return (
     <HomeContainer>
+      <Helmet>
+        <title>Ignite Timer</title>
+        <meta name="Timer para lidar melhor com seu tempo" content="Pomodoro" />
+      </Helmet>
+
       <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
         <FormProvider {...newCycleForm}>
           <NewCycleForm />
