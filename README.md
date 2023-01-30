@@ -6,7 +6,7 @@
 ## 🍅 Aplicação Pomodoro
 
 
-![](timer -1.png)
+![](timer-1.png)
 ![](timer-2.png)
 
 Aplicação para orgarnizar tempo entre uma atividade à outra.
