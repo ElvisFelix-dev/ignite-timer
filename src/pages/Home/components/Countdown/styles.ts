@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export const CountdownContainer = styled.div`
@@ -8,18 +7,24 @@ export const CountdownContainer = styled.div`
   color: ${(props) => props.theme['gray-100']};
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
   span {
     background: ${(props) => props.theme['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     font-size: 8rem;
     line-height: 6rem;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 992px) {
     font-size: 6rem;
     line-height: 4rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 4rem;
+    line-height: 3rem;
   }
 `
 export const Separator = styled.div`
@@ -28,5 +33,12 @@ export const Separator = styled.div`
   width: 4rem;
   overflow: hidden;
   display: flex;
+  align-items: center;
   justify-content: center;
+  @media (max-width: 992px) {
+    width: 3rem;
+  }
+  @media (max-width: 576px) {
+    width: 2rem;
+  }
 `
