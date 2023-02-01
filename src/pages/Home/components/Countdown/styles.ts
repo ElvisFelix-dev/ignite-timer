@@ -1,3 +1,4 @@
+
 import styled from 'styled-components'
 
 export const CountdownContainer = styled.div`
@@ -11,6 +12,14 @@ export const CountdownContainer = styled.div`
     background: ${(props) => props.theme['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    font-size: 8rem;
+    line-height: 6rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 6rem;
+    line-height: 4rem;
   }
 `
 export const Separator = styled.div`
